@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VotacionesUSTA – Sistema de Votación Digital</title>
+    <meta
+      name="description"
+      content="Sistema de votación digital seguro, accesible y confiable para procesos democráticos."
+    />
+    <meta
+      name="keywords"
+      content="votaciones, sistema digital, elecciones, USTA, democracia, seguridad"
+    />
+
+    <!-- Tailwind vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100"
+  >
+    <!-- NAV -->
+    <nav
+      class="p-10 sticky top-0 z-50 bg-[#C5E7F6] dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700"
+      role="navigation"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <img
+            src="./assets/img/logo.png"
+            alt="Logo VotacionesUSTA"
+            class="h-10"
+          />
+          <a href="#" class="font-bold text-2xl hover:opacity-80 transition">
+            VotacionesUSTA
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <input
+            id="search"
+            type="search"
+            placeholder="Buscar..."
+            class="border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 placeholder-slate-400 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#48BCF0]"
+            aria-label="Buscar en el sitio"
+          />
+          <button
+            id="themeBtn"
+            class="text-sm px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            aria-label="Cambiar tema"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button
+            class="hover:scale-110 transition"
+            aria-label="Abrir cámara"
+          >
+
+          </button>
+          <div>
+            <img
+              class="w-10 h-10 rounded-full border border-slate-300 dark:border-slate-600"
+              src="assets/img/profile.svg"
+              alt="Imagen de perfil de usuario"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header
+      class="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto px-6 py-16"
+    >
+      <div class="flex-1">
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+          Sistema de Votación Digital
+        </h1>
+        <p class="mt-4 max-w-2xl text-lg">
+          Diseñado para garantizar procesos democráticos <strong>seguros,
+          accesibles y confiables</strong>. Incluye autenticación robusta,
+          cifrado de extremo a extremo y auditoría transparente para proteger
+          cada voto.
+        </p>
+        <a
+          href="#features"
+          class="inline-block mt-6 bg-[#48BCF0] font-medium px-6 py-3 rounded-2xl shadow-md hover:shadow-lg text-white hover:bg-[#2EA1D6] transition"
+        >
+          Ver características
+        </a>
+      </div>
+      <div class="flex-1">
+        <img
+          src="./assets/img/portada.svg"
+          alt="Ilustración sistema de votación"
+          class="w-full max-w-md mx-auto"
+        />
+      </div>
+    </header>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8 bg-[#c5e7f6] rounded-2xl shadow-lg">
+       <div class="col-span-full text-center mb-8">
+    <h2 class="text-3xl font-bold text-[#48bcf0]">Panel Electoral</h2>
+    <p class="">Visualiza el estado del proceso en tiempo real</p>
+  </div>
+      
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+        <h3 class="font-semibold mb-3">Proceso de Voto</h3>
+        <div class="flex justify-around">
+          <div class="text-center">
+            <p class="text-2xl font-bold text-[#48BCF0]">30%</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Votos registrados</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold text-[#48BCF0]">3</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Candidatos</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col justify-center items-center">
+        <h3 class="font-semibold">Calendario</h3>
+        <p class="text-3xl font-bold text-[#48BCF0]">23</p>
+        <p class="text-slate-600 dark:text-slate-400">Agosto 2025</p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+        <h3 class="font-semibold mb-3">Resultados</h3>
+        <div class="space-y-3">
+          <div>
+            <div class="flex items-center justify-between">
+              <span>Candidato 1</span><span class="font-bold">70%</span>
+            </div>
+            <div class="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span>Candidato 2</span><span class="font-bold">50%</span>
+            </div>
+            <div class="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2">
+              <div class="bg-green-500 h-2 rounded-full" style="width: 50%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 dark:border-slate-700">
+      <div
+        class="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500 dark:text-slate-400 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <span>© <span id="year"></span> VotacionesUSTA – Fase 6. Despliegue</span>
+        <a
+          class="hover:underline"
+          href="https://tailwindcss.com/docs"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Tailwind Docs
+        </a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
