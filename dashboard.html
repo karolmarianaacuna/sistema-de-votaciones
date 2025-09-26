@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard – VotacionesUSTA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: "class" };
+  </script>
+</head>
+<body class="bg-[#f4f8fb] min-h-screen">
+  <div class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-[#c5e7f6] flex items-center justify-between px-8 py-4 border-b-2 border-[#48bcf0]">
+      <div class="flex items-center gap-4">
+        <img src="assets/img/logo.png" alt="Logo VotacionesUSTA" class="h-14">
+        <span class="text-2xl font-bold text-[#234b7b]">VotacionesUSTA</span>
+      </div>
+      <div class="flex items-center gap-4">
+          <div>
+            <div class="relative">
+              <button id="profileBtn" aria-label="Perfil de usuario">
+                <img
+                  class="w-10 h-10 rounded-full border border-slate-300 dark:border-slate-600"
+                  src="assets/img/profile.svg"
+                  alt="Imagen de perfil de usuario"
+                />
+              </button>
+              <div id="loginMenu" class="hidden absolute right-0 mt-2 w-40 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-lg z-50">
+                <button class="block w-full text-left px-4 py-2 text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700" id="loginOption1">volver al inicio</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex flex-1">
+      <!-- Sidebar -->
+      <aside class="bg-[#48bcf0] w-80 p-8 flex flex-col items-center min-h-full">
+        <div class="flex flex-col items-center mb-8">
+          <div class="bg-white rounded-full w-36 h-36 flex items-center justify-center mb-4">
+            <img src="assets/img/profile.svg" alt="Perfil" class="h-28 w-28">
+          </div>
+          <div class="text-center">
+            <span class="block font-bold text-lg text-[#234b7b]">Karol Mariana Acuña Barrera</span>
+            <span class="block text-[#234b7b] font-semibold text-sm">C.C 1050603738</span>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-4 w-full">
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#e3f3fa] text-[#234b7b] font-bold text-lg shadow transition">
+            <i class="fa-solid fa-house text-2xl"></i> DashBoard
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[#e3f3fa] text-[#234b7b] font-bold text-lg transition">
+            <i class="fa-solid fa-file-lines text-2xl"></i> Reglas
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[#e3f3fa] text-[#234b7b] font-bold text-lg transition">
+            <i class="fa-solid fa-vote-yea text-2xl"></i> Votación
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[#e3f3fa] text-[#234b7b] font-bold text-lg transition">
+            <i class="fa-solid fa-user text-2xl"></i> Perfil
+          </a>
+        </nav>
+      </aside>
+      <!-- Main Content -->
+      <section class="flex-1 p-12">
+        <div class="mb-8">
+          <h1 class="text-4xl font-bold mb-2">Hello, <span class="text-[#48bcf0]">Mariana</span></h1>
+          <p class="text-lg text-slate-700">Bienvenido al sistema de votación. Aquí podrás gestionar procesos electorales, visualizar estadísticas en tiempo real y garantizar la transparencia de cada elección.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Resultados -->
+          <div class="bg-[#e3f3fa] rounded-2xl p-6 col-span-2 flex flex-col gap-6">
+            <h2 class="font-bold text-lg mb-2">resultados</h2>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-3">
+                <img src="assets/img/profile.svg" class="h-8 w-8 rounded-full border-2 border-[#48bcf0]" alt="Candidato 1">
+                <div class="flex-1 bg-[#b6e0fa] rounded-full h-4 relative">
+                  <div class="bg-[#48bcf0] h-4 rounded-full absolute left-0 top-0" style="width: 70%"></div>
+                </div>
+                <span class="ml-3 font-bold text-[#234b7b]">70%</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="assets/img/profile.svg" class="h-8 w-8 rounded-full border-2 border-[#48bcf0]" alt="Candidato 2">
+                <div class="flex-1 bg-[#b6e0fa] rounded-full h-4 relative">
+                  <div class="bg-[#48bcf0] h-4 rounded-full absolute left-0 top-0" style="width: 50%"></div>
+                </div>
+                <span class="ml-3 font-bold text-[#234b7b]">50%</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="assets/img/profile.svg" class="h-8 w-8 rounded-full border-2 border-[#48bcf0]" alt="Candidato 3">
+                <div class="flex-1 bg-[#b6e0fa] rounded-full h-4 relative">
+                  <div class="bg-[#48bcf0] h-4 rounded-full absolute left-0 top-0" style="width: 30%"></div>
+                </div>
+                <span class="ml-3 font-bold text-[#234b7b]">30%</span>
+              </div>
+            </div>
+          </div>
+          <!-- Calendario -->
+          <div class="bg-[#e3f3fa] rounded-2xl p-6 flex flex-col items-center justify-center">
+            <h2 class="font-bold text-lg mb-2">Calendario</h2>
+            <span class="text-5xl font-bold text-[#234b7b]">23</span>
+            <span class="text-[#48bcf0] font-bold text-lg">agosto 2025</span>
+          </div>
+        </div>
+        <!-- Proceso de voto -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-[#e3f3fa] rounded-2xl p-6 flex flex-col items-center col-span-2">
+            <h2 class="font-bold text-lg mb-4">proceso de voto</h2>
+            <div class="flex flex-wrap gap-8 justify-center w-full">
+              <div class="flex flex-col items-center">
+                <div class="relative w-20 h-20 mb-2">
+                  <svg class="absolute top-0 left-0" width="80" height="80">
+                    <circle cx="40" cy="40" r="32" stroke="#234b7b" stroke-width="8" fill="none" />
+                    <circle cx="40" cy="40" r="32" stroke="#48bcf0" stroke-width="8" fill="none" stroke-dasharray="201" stroke-dashoffset="140" />
+                  </svg>
+                  <span class="absolute inset-0 flex items-center justify-center text-xl font-bold text-[#234b7b]">30%</span>
+                </div>
+                <span class="text-xs text-[#234b7b] text-center">total de votos<br>registrados</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="relative w-20 h-20 mb-2">
+                  <svg class="absolute top-0 left-0" width="80" height="80">
+                    <circle cx="40" cy="40" r="32" stroke="#234b7b" stroke-width="8" fill="none" />
+                    <circle cx="40" cy="40" r="32" stroke="#48bcf0" stroke-width="8" fill="none" stroke-dasharray="201" stroke-dashoffset="140" />
+                  </svg>
+                  <span class="absolute inset-0 flex items-center justify-center text-xl font-bold text-[#234b7b]">30%</span>
+                </div>
+                <span class="text-xs text-[#234b7b] text-center">total de votos<br>faltantes</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="relative w-20 h-20 mb-2">
+                  <svg class="absolute top-0 left-0" width="80" height="80">
+                    <circle cx="40" cy="40" r="32" stroke="#234b7b" stroke-width="8" fill="none" />
+                  </svg>
+                  <span class="absolute inset-0 flex items-center justify-center text-xl font-bold text-[#234b7b]">3</span>
+                </div>
+                <span class="text-xs text-[#234b7b] text-center">numero total de<br>candidatos registrados</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-end justify-end">
+            <img src="assets/img/profile.svg" alt="Ilustración" class="h-48 w-auto">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

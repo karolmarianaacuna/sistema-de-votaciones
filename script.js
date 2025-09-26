@@ -1,3 +1,42 @@
+// Mostrar/ocultar menú de login al hacer clic en la imagen de perfil
+document.addEventListener('DOMContentLoaded', function () {
+  const profileBtn = document.getElementById('profileBtn');
+  const dashBoardbtn = document.getElementById('dashBoardbtn');
+  const loginMenu = document.getElementById('loginMenu');
+  if (profileBtn && loginMenu) {
+    profileBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      loginMenu.classList.toggle('hidden');
+    });
+    // Ocultar el menú si se hace clic fuera
+    document.addEventListener('click', function (e) {
+      if (!loginMenu.contains(e.target) && !dashBoardbtn.contains(e.target)) {
+        loginMenu.classList.add('hidden');
+      }
+    });
+    // Acción al hacer clic en "Iniciar sesión"
+    const loginOption = document.getElementById('loginOption');
+    const loginOption1 = document.getElementById('loginOption1');
+    if (loginOption1) {
+      loginOption1.addEventListener('click', function () {
+        window.location.href = 'index.html';
+        loginMenu.classList.add('hidden');
+      });
+    }
+    if (loginOption) {
+      loginOption.addEventListener('click', function () {
+      window.location.href = 'dashboard.html';
+      loginMenu.classList.add('hidden');
+      });
+    }
+    // Acción al hacer clic en DashBoard
+    if (dashBoardbtn) {
+      dashBoardbtn.addEventListener('click', function () {
+        window.location.href = 'index.html';
+      });
+    } 
+  } 
+});
 // Interacciones de ejemplo
 const themeBtn = document.getElementById('themeBtn');
 const root = document.documentElement;
